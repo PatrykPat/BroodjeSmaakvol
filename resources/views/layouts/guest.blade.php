@@ -15,15 +15,17 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-white-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
+        <div class="padaanpas min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
+        <div class="topImg"><img src="images/wavesboven.svg" class="waveMaxTop"></div>
+            <div class="logo">
                 <a href="/">
-                    <x-application-logo class="LogoBS" />
+                    <x-application-logo class="LogoBS"/>
                 </a>
             </div>
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+            <div class="form">
                 {{ $slot }}
             </div>
+            <div class="botImg"><img src="images/wavesonder.svg" class="waveMaxBot"></div>
         </div>
     </body>
 </html>

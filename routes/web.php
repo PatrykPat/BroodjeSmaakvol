@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('login'));
 });
+// Route::get('/menu', function () {
+//     return view('menu');
+// })->middleware(['auth', 'verified'])->name('menu');
+Route::get('/menu', [MenuController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
