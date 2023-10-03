@@ -10,13 +10,16 @@ body {
 }
 
 .bottomNav {
-  overflow: hidden;
-  background-color: green;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 60px
-}
+   position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #a0c49d;
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 60px;}
 
 .bottomNav a {
   float: left;
@@ -55,6 +58,10 @@ body {
 </head>
 
 <body>
+  <div class="populair">
+  <h1>populair</h1>
+
+</div>
 
 <div class="container">
     <div class="grid">
