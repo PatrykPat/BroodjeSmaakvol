@@ -9,10 +9,52 @@
         background-color: #EB5258;
         border-radius: 23px;
     }
+    .back{
+        border-style: none;
+    }
+    .topImg{
+        max-width: 450px;
+        max-height: 400px;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        z-index: -1;
+    }
+    .botImg{
+        max-width: 450px;
+        max-height: 400px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .waveMaxTop{  
+        float: right;
+    }
+    .waveMaxBot{
+        float: left;
+    }
+    .logo{
+        position: relative;
+        top: 120px
+    }
+    .form{
+        position: relative;
+        top: 120px
+    }
+    .padaanpas{
+        padding: 0px;
+        justify-content: start;
+    }
+    .reset:hover{
+        color: red;
+    }
     
     </style>
     <!-- Session Status -->
-    <x-auth-session-status class="inputveld" :status="session('status')" />
+    <x-auth-session-status class="inputveld back" :status="session('status')" />
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
@@ -20,7 +62,7 @@
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Login')" />
-            <x-text-input id="email" class="inputveld mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" placeholder="School ID"/>
+            <x-text-input id="email" class="inputveld mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" placeholder="School Mail"/>
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
@@ -47,7 +89,7 @@
 
         <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
+                <a class="reset underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
