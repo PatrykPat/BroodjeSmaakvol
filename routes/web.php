@@ -23,6 +23,10 @@ Route::get('/', function () {
 // })->middleware(['auth', 'verified'])->name('menu');
 Route::get('/menu', [MenuController::class, 'index']);
 
+Route::get('/meldingen', function () {
+    return view('melding');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
