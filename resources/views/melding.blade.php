@@ -124,13 +124,10 @@
 <div class="topImg"><img src="images/wavesgroenboven.svg"></div>
 <div class='botImg'><img src="images/wavesgroenonder.svg"></div>
 
-<div class="footer">
-  <img src="{{ asset('images/meldingen.svg') }}" alt="Winkelwagen">
-  <img src="{{ asset('images/home.svg') }}" alt="Winkelwagen">
-  <img src="{{ asset('images/winkelwagen.svg') }}" alt="Winkelwagen">
-  <img src="{{ asset('images/coupon.svg') }}" alt="Winkelwagen">
+@component('components.footer')
+@endcomponent
 
-</div>
+
 </body>
 </html>
 <script>
