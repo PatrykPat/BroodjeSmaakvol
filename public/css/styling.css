@@ -48,7 +48,7 @@ body {
   min-height: 100vh;
 }
 
-.footer {
+.bottomNav {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -61,11 +61,21 @@ body {
     height: 50px;
 }
 
-.footer img {
+.bottomNav img {
     display: block;
     margin: 0 auto;
     margin-top: 7px;
     max-width: 35px;
+}
+
+.bottomNav a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.bottomNav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
 
  hr.solid {
