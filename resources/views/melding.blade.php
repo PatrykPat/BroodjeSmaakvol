@@ -127,7 +127,6 @@
 @component('components.footer')
 @endcomponent
 
-
 </body>
 </html>
 <script>
