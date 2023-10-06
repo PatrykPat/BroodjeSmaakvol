@@ -27,6 +27,14 @@ Route::get('/meldingen', function () {
     return view('melding');
 });
 
+Route::get('/coupon', function () {
+    return view('coupons');
+});
+
+Route::get('/winkelwagen', function () {
+    return view('winkelwagen');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
