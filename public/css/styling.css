@@ -1,0 +1,281 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+  .content {
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: 5px;
+  }
+
+  .info-text {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 8px 0;
+    border-color: #333 transparent transparent;
+    cursor: pointer;
+  }
+  .dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+  }
+  .dropdown-content.active {
+    max-height: 200px;
+  }
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #a0c49d;
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 50px;
+}
+
+.footer img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 7px;
+    max-width: 35px;
+}
+
+ hr.solid {
+  border-top: 2px solid #bbb;
+  margin: 25px;
+  background-color: black;
+}
+
+.topImg{
+    max-width: 450px;
+    max-height: 400px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+}
+.botImg{
+    max-width: 450px;
+    max-height: 200px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.bottomNav {
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #a0c49d;
+   color: white;
+   text-align: center;
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   height: 60px;}
+
+.bottomNav a {
+ float: left;
+ display: block;
+ color: #f2f2f2;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+}
+
+.bottomNav a:hover {
+ background: #f1f1f1;
+ color: black;
+}
+
+.bottomNav a.active {
+ background-color: #04AA6D;
+ color: white;
+}
+
+.main {
+ padding: 16px;
+ margin-bottom: 30px;
+}
+.icons{
+   width: 40px
+}
+.imgbroodje{
+ width: 20%;
+ height: 20%;
+}
+
+.logo{
+  position: relative;
+  top: 120px
+}
+.form{
+  position: relative;
+  top: 120px
+}
+.padaanpas{
+  padding: 0px;
+  justify-content: start;
+}
+.reset:hover{
+  color: red;
+}
+.inputveld{
+  background-color: #F1F2F2;
+  color: black;
+  border-radius: 23px;
+}
+.loginbutton{
+  background-color: #EB5258;
+  border-radius: 23px;
+}
+.back{
+  border-style: none;
+}
+.Pagetitle{
+  width: 100%;
+  top: 10px;
+text-align: center;
+}
+
+.filtermenu{
+  width: 100%;
+
+text-align: center;
+
+}
+.populairtitle{
+  width: 100%;
+
+text-align: center;
+
+}
+.populair{
+  padding: 1%;
+  width: 98%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.popI1{
+  padding: 5px;
+  background-color: #EB5258;
+  border: #EB5258;
+  border-style: solid;
+  border-radius: 25px;
+  width: 40%;
+  position: relative;
+  align-content: center;
+  max-width: 400px;
+}
+.popI2{
+  padding: 5px;
+  background-color: #a0c49d;
+  border: #a0c49d;
+  border-style: solid;
+  border-radius: 25px;
+  width: 40%;
+  position: relative;
+  align-content: center;
+  max-width: 400px;
+}
+
+.imgbroodjeP1{
+  position: relative;
+  width: 50%;
+  max-height: 500px;
+  padding-left: 25%;
+  align-content: center;
+  justify-content: center;
+
+}
+.line {
+  width: 90%; /* Set the line width to 90% of the page width */
+  height: 2px; /* Set the line thickness to 5px */
+  background-color: gray; /* Set the line color (black in this example) */
+  margin: 0 auto;
+}
+
+.left-line{
+  width: 35%;
+  position: relative;
+  align-self: center;
+}
+.right-line{
+  width: 35%;
+  position: relative;
+  align-self: center;
+}
+.titletext2{
+  position: relative;
+  width: 20%;
+  text-align: center;
+  
+  top: 60%;
+}
+.tussenkop{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.productcontainer{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.veganon{
+  display: block;
+  width: 50px;
+  height: 50px;
+
+}
+.veganoff{
+  display: none;
+}
+.winkelwagenknop{
+  border: #EB5258;
+  background-color: #EB5258;
+  border-radius: 20px;
+  color: white;
+  width: 50px;
+  height: 30px;
+  align-content: center;
+}
+.winkelwagenimg{
+  width:20px;
+  align-self: center;
+
+}

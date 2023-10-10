@@ -4,77 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menu</title>
-    <style>
-body {
-  margin: 0;
-}
-
-.bottomNav {
-   position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #a0c49d;
-    color: white;
-    text-align: center;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    height: 60px;}
-
-.bottomNav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.bottomNav a:hover {
-  background: #f1f1f1;
-  color: black;
-}
-
-.bottomNav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.main {
-  padding: 16px;
-  margin-bottom: 30px;
-}
-.icons{
-    width: 40px
-}
-.imgbroodje{
-  width: 20%;
-  height: 20%;
-}
-
-
-</style>
+    <link rel="stylesheet" href="css\styling.css">
 </head>
 
 <body>
-  <div class="populair">
-  <h1>populair</h1>
+  
+  <h1 class="Pagetitle">menu</h1>
 
-</div>
+<div class="filtermenu"><h3>hierkomt filter menu</h3></div>
 
-<div class="container">
-    <div class="grid">
-        @foreach ($products as $product)
-        <div data-category='{{$product["categorie_categorieid"]}}' class="grid-item">
+<div class="tussenkop">
+    <div class="line left-line"></div>
+        <div class="titletext2">populair</div>
+    <div class="line right-line"></div>
+</div>  
+<div class="populair">
+@php
+    $count = 0; // Initialize a counter variable
+@endphp
+
+@foreach ($products as $product)
+    @if ($product->populair && $count < 2) {{-- Check if it's a popular product and the count is less than 2 --}}
+        <div class="@if ($count == 0) popI1 @else popI2 @endif">
+            <img class="imgbroodjeP1" src="images/{{$product->afbeeldingnaam}}">
             <div class="product-info">
                 <h3>{{$product->naam}}</h3>
                 <p>€{{$product->prijs}}</p>
-                <img class="imgbroodje" src="images/{{$product->afbeeldingnaam}}">
+                <img src="images/vegan.png" class="@if ($product->vegan) veganon @else veganoff @endif">
             </div>
         </div>
-        @endforeach
-    </div>
+        @php
+            $count++; // Increment the counter
+        @endphp
+    @endif
+@endforeach
+</div>
+
+<div class="tussenkop">
+    <div class="line left-line"></div>
+        <div class="titletext2">broodjes</div>
+    <div class="line right-line"></div>
+</div>  
+
+<div class="productcontainer">
+    @foreach ($products as $product)
+    <img class="imgbroodje" src="images/{{$product->afbeeldingnaam}}">
+        <div class="product-info">
+            <h3>{{$product->naam}}</h3>
+            <p>€{{$product->prijs}}</p>
+        </div>
+        <img src="images/vegan.png" class="@if ($product->vegan) veganon @else veganoff @endif">
+        <button class="winkelwagenknop"><img class="winkelwagenimg" src="images/winkelwagen.svg"></button>
+    <div class="line"></div>
+    @endforeach
 </div>
 <div class="bottomNav">
         <a href="/meldingen" class="icon-link">
