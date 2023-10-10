@@ -1,10 +1,7 @@
-<<<<<<< Updated upstream
-<!-- hier komt medingen pagina -->
-=======
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\styling.css">
@@ -12,7 +9,7 @@
 </head>
 <body>
 
-<center><h2>Meldingen</h2><center>
+<h2>Meldingen</h2>
 
 
 <div class="container">
@@ -141,6 +138,9 @@
             <img class="icons" src="images/coupon.svg" alt="coupon">
         </a>
     </div>
+@component('components.footer')
+@endcomponent
+
 </body>
 </html>
 <script>
@@ -156,5 +156,4 @@
         });
       });
     });
-  </script>
->>>>>>> Stashed changes
+</script>
