@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -84,6 +86,20 @@ body {
   background-color: black;
 }
 
+.text-divider {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.text-divider::before, .text-divider::after {
+  flex: 1;
+  content: '';
+  padding: 1px;
+  margin: 5px;
+  background-color: black;
+}
+
 .topImg{
     max-width: 450px;
     max-height: 400px;
@@ -109,3 +125,94 @@ body {
 .waveMaxBot{
     float: 	left;
 }
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-item {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 20px;
+  width: 40%;
+}
+
+.grid-item img {
+  max-width: 90%;
+  max-height: 10%;
+  border-radius: 10px;
+}
+
+.grid-item h4 {
+  float: left;
+  font-size: 10px;
+}
+
+.red {
+  color: white;
+  background-color: #f0545c;
+}
+
+.green {
+  color: black;
+  background-color: #a0c49d;
+  margin-top: 40px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+
+  #inner-grid {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 5px;
+  }
+  #inner-grid > div {
+    background: lightgreen;
+    padding: 8px;
+  }
+
+  .item1 { grid-area: foto; }
+  .item2 { grid-area: titel; }
+  .item3 { grid-area: descriptie; }
+  .item4 { grid-area: prijs; }
+  .item5 { grid-area: buy; }
+  
+  .brood-lijst {
+    display: grid;
+    grid-template-areas:
+      'foto foto titel titel prijs prijs'
+      'foto foto descriptie descriptie descriptie buy';
+    gap: 10px;
+    background-color: #2195f300;
+    padding: 10px;
+  }
+
+  .image2 {
+    width: 150px;
+    border-radius: 20px;
+  }
+
+  .brood-lijst button {
+    border-radius: 10px;
+    background-color: #f0545c;
+    width: 30%;
+    height: 50%;
+  }
+  
+  .brood-lijst > div {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 15px;
+  }
