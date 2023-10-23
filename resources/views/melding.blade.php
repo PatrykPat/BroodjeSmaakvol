@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="css\styling.css">
     <title>Meldingen</title>
 </head>
+
+<style>
+  body {
+    text-align: center;
+  }
+</style>
 <body>
 
-<h2>Meldingen</h2>
+<h1 class="Pagetitle">Meldingen</h1>
 
 
 <div class="container">
@@ -138,6 +144,7 @@
             <img class="icons" src="images/coupon.svg" alt="coupon">
         </a>
     </div>
+
 @component('components.footer')
 @endcomponent
 

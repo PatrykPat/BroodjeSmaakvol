@@ -2,7 +2,7 @@
 
 .container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto;
     font-size: 20px;
   }
   .content {
@@ -66,8 +66,8 @@ body {
 .bottomNav img {
     display: block;
     margin: 0 auto;
-    margin-top: 7px;
     max-width: 35px;
+    margin-top: 8px;
 }
 
 .bottomNav a:hover {
@@ -114,40 +114,9 @@ body {
     max-height: 200px;
     width: 100%;
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     z-index: -1;
-}
-.bottomNav {
-  position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: #a0c49d;
-   color: white;
-   text-align: center;
-   display: grid;
-   grid-template-columns: auto auto auto auto;
-   height: 60px;}
-
-.bottomNav a {
- float: left;
- display: block;
- color: #f2f2f2;
- text-align: center;
- padding: 14px 16px;
- text-decoration: none;
- font-size: 17px;
-}
-
-.bottomNav a:hover {
- background: #f1f1f1;
- color: black;
-}
-
-.bottomNav a.active {
- background-color: #04AA6D;
- color: white;
 }
 
 .main {
@@ -197,7 +166,6 @@ text-align: center;
 
 .filtermenu{
   width: 100%;
-
 text-align: center;
 
 }
@@ -378,8 +346,8 @@ text-align: center;
   .brood-lijst {
     display: grid;
     grid-template-areas:
-      'foto foto titel titel prijs prijs'
-      'foto foto descriptie descriptie descriptie buy';
+      'foto titel titel titel prijs prijs'
+      'foto descriptie- descriptie descriptie descriptie buy';
     gap: 10px;
     background-color: #2195f300;
     padding: 10px;

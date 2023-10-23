@@ -9,7 +9,7 @@
 
 <body>
   
-  <h1 class="Pagetitle">menu</h1>
+  <h1 class="Pagetitle">Menu</h1>
 
 <div class="filtermenu"><h3>hierkomt filter menu</h3></div>
 
