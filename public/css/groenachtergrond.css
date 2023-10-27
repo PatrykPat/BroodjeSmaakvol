@@ -1,0 +1,18 @@
+.topImg{
+    max-width: 450px;
+    max-height: 400px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+}
+.botImg{
+    max-width: 450px;
+    max-height: 200px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}

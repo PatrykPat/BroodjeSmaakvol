@@ -11,13 +11,13 @@
       }
 
       .cls-2 {
-        stroke: #a0c49d;
+        stroke: black;
         stroke-miterlimit: 10;
         stroke-width: 20px;
       }
 
       .cls-3 {
-        opacity: .15;
+        opacity: 1.0;
         clip-path: url(#clippath);
       }
     </style>

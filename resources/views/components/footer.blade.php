@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css\botnav.css">
 <div class="bottomNav">
         <a href="/meldingen" class="icon-link">
             <img class="icons" src="images/meldingen.svg" alt="meldingen">
