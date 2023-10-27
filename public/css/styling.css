@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
 
 .container {
     max-width: 600px;
@@ -50,36 +50,6 @@ body {
   min-height: 100vh;
 }
 
-.bottomNav {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #a0c49d;
-    color: white;
-    text-align: center;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    height: 50px;
-}
-
-.bottomNav img {
-    display: block;
-    margin: 0 auto;
-    margin-top: 7px;
-    max-width: 35px;
-}
-
-.bottomNav a:hover {
-  background: #f1f1f1;
-  color: black;
-}
-
-.bottomNav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
  hr.solid {
   border-top: 2px solid #bbb;
   margin: 25px;
@@ -114,52 +84,17 @@ body {
     max-height: 200px;
     width: 100%;
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     z-index: -1;
-}
-.bottomNav {
-  position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: #a0c49d;
-   color: white;
-   text-align: center;
-   display: grid;
-   grid-template-columns: auto auto auto auto;
-   height: 60px;}
-
-.bottomNav a {
- float: left;
- display: block;
- color: #f2f2f2;
- text-align: center;
- padding: 14px 16px;
- text-decoration: none;
- font-size: 17px;
-}
-
-.bottomNav a:hover {
- background: #f1f1f1;
- color: black;
-}
-
-.bottomNav a.active {
- background-color: #04AA6D;
- color: white;
 }
 
 .main {
  padding: 16px;
  margin-bottom: 30px;
 }
-.icons{
-   width: 40px
-}
 .imgbroodje{
- width: 20%;
- height: 20%;
+ width: 100%;
 }
 
 .logo{
@@ -212,29 +147,34 @@ text-align: center;
   width: 98%;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  margin-bottom: 60px;
 }
 .popI1{
   padding: 5px;
-  background-color: #EB5258;
-  border: #EB5258;
-  border-style: solid;
-  border-radius: 25px;
-  width: 40%;
-  position: relative;
-  align-content: center;
-  max-width: 400px;
+    background-color: #EB5258;
+    border: #EB5258;
+    border-style: solid;
+    color: white;
+    border-radius: 25px;
+    width: 45%;
+    position: relative;
+    left: 5%;
+    align-content: center;
+    max-width: 400px;
 }
 .popI2{
-  padding: 5px;
-  background-color: #a0c49d;
-  border: #a0c49d;
-  border-style: solid;
-  border-radius: 25px;
-  width: 40%;
-  position: relative;
-  align-content: center;
-  max-width: 400px;
+  right: 3%;
+    top: 20%;
+    padding: 5px;
+    background-color: #a0c49d;
+    border: #a0c49d;
+    border-style: solid;
+    border-radius: 25px;
+    width: 45%;
+    position: absolute;
+    align-content: center;
+    max-width: 400px;
+    z-index: -1;
 }
 
 .imgbroodjeP1{
@@ -248,9 +188,15 @@ text-align: center;
 }
 .line {
   width: 90%; /* Set the line width to 90% of the page width */
-  height: 2px; /* Set the line thickness to 5px */
+  height: 1px; /* Set the line thickness to 5px */
   background-color: gray; /* Set the line color (black in this example) */
   margin: 0 auto;
+}
+.line2 {
+  width: 100%; /* Set the line width to 90% of the page width */
+  height: 1px; /* Set the line thickness to 5px */
+  background-color: gray; /* Set the line color (black in this example) */
+  margin: 10px auto;
 }
 
 .left-line{
@@ -278,14 +224,15 @@ text-align: center;
 }
 .productcontainer{
   display: flex;
-  width: 100%;
+  width: 90%;
   flex-wrap: wrap;
   align-content: center;
+  margin: 0% 5%;
 }
 .veganon{
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
 
 }
 .veganoff{
@@ -299,6 +246,7 @@ text-align: center;
   width: 50px;
   height: 30px;
   align-content: center;
+  float: right;
 }
 .winkelwagenimg{
   width:20px;
@@ -403,3 +351,54 @@ text-align: center;
     padding: 20px 0;
     font-size: 15px;
   }
+  .product-info{
+    width: 40%;
+}
+.buttonplace{
+  width: 25%;
+  height: 60px;
+  margin-top: 20px;
+}
+.prijs{
+  float: right;
+  margin-top: 20px;
+}
+
+.beschrijving {
+  font-size: 10px;
+  font-weight: 100;
+  margin: 0px;
+}
+.producttitle {
+  margin: 10px 0 0 0
+}
+.containerbroodje{
+  width: 35%;
+  height: 110%;
+}
+.containerbroodjeP{
+  width: 100%;
+}
+.product-infoP{
+  width: 65%;
+}
+.buttonplaceP{
+  width: 25%;
+  margin-top: 20px;
+}
+.winkelwagenknopG{
+  border:#a0c49d;
+  background-color: #a0c49d;
+  border-radius: 20px;
+  color: white;
+  width: 50px;
+  height: 30px;
+  align-content: center;
+  float: right;
+}
+.popextra{
+  display: flex;
+  margin-left: 15px;
+  justify-content: space-between;
+
+}
