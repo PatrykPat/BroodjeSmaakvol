@@ -8,7 +8,7 @@
 </head>
 <body>
     <p>Hier komt de winkelwagen</p>
-    
+
 
 @component('components.footer')
 @endcomponent
