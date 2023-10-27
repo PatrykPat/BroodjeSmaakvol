@@ -8,7 +8,16 @@
 </head>
 
 <body>
+<<<<<<< Updated upstream
   
+=======
+<div class="topImg"><img src="images/wavesgroenboven.svg" class="waveMaxTop"></div>
+<div class="botImg"><img src="images/wavesgroenonder.svg" class="waveMaxBot"></div>
+ 
+@component('components.burger')
+@endcomponent
+
+>>>>>>> Stashed changes
   <h1 class="Pagetitle">Menu</h1>
 
 <div class="filtermenu"><h3>hierkomt filter menu</h3></div>

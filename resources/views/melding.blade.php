@@ -9,11 +9,14 @@
 </head>
 
 <style>
-  body {
+.container {
     text-align: center;
-  }
+}
 </style>
 <body>
+
+@component('components.burger')
+@endcomponent
 
 <h1 class="Pagetitle">Meldingen</h1>
 

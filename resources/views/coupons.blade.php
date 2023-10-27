@@ -8,6 +8,9 @@
 </head>
 <body>
 
+@component('components.burger')
+@endcomponent
+
 <h1 class="Pagetitle">Coupons</h1>
 
  <div class="text-divider">Top coupons</div>

@@ -31,8 +31,13 @@ Route::get('/coupon', function () {
     return view('coupons');
 });
 
+<<<<<<< Updated upstream
 Route::get('/winkelwagen', function () {
     return view('winkelwagen');
+=======
+Route::get('/profiel', function () {
+    return view('profiel');
+>>>>>>> Stashed changes
 });
 
 Route::get('/dashboard', function () {
