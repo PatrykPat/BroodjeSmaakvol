@@ -2,7 +2,7 @@
 
 .container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto;
     font-size: 20px;
   }
   .content {
@@ -132,7 +132,6 @@ text-align: center;
 
 .filtermenu{
   width: 100%;
-
 text-align: center;
 
 }
@@ -326,8 +325,8 @@ text-align: center;
   .brood-lijst {
     display: grid;
     grid-template-areas:
-      'foto foto titel titel prijs prijs'
-      'foto foto descriptie descriptie descriptie buy';
+      'foto titel titel titel prijs prijs'
+      'foto descriptie- descriptie descriptie descriptie buy';
     gap: 10px;
     background-color: #2195f300;
     padding: 10px;

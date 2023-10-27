@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<center><h2>Coupons</h2><center>
+<h1 class="Pagetitle">Coupons</h1>
 
  <div class="text-divider">Top coupons</div>
 
