@@ -9,27 +9,21 @@ use App\Models\MenuItem;
 
 class Cart extends Model
 {
-protected $table = 'product_cart';
-protected $fillable = ['product_id', 'vegan', 'naam', 'beschrijving', 'prijs', 'vegan', 'uitverkocht', 'afbeeldingnaam'];    
+protected $table = 'orders';
+protected $fillable = ['id', 'user_id'];    
 
 public function user()
 {
     return $this->belongsTo(User::class);
 }
 
-public function products()
+public function producten()
 {
-    return $this->belongsToMany(MenuItem::class, 'product_cart');
+    // return $this->belongsToMany(MenuItem::class);
+    return $this->belongsToMany(MenuItem::class,'product_cart','cart_id','product_id');
 }
 public function productInfo()
 {
     return MenuItem::where('id', $this->product_id)->value('naam');
     
-}
-
-
-// public function addToCart()
-//     {
-//         return $this->belongsToMany(product_cart::class,'product_cart', 'product_id', 'cart_id');
-//     }
-}
+}};

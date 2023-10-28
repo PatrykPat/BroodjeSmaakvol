@@ -143,7 +143,7 @@ text-align: center;
 }
 .populair{
   padding: 1%;
-  width: 98%;
+  width: 53%;
   overflow: hidden;
   display: flex;
   margin-bottom: 60px;
@@ -155,15 +155,15 @@ text-align: center;
     border-style: solid;
     color: white;
     border-radius: 25px;
-    width: 45%;
+    width: 100%;
     position: relative;
-    left: 5%;
     align-content: center;
     max-width: 400px;
+    z-index: 2;
 }
 .popI2{
   right: 3%;
-    top: 20%;
+    margin-top: 15%;
     padding: 5px;
     background-color: #a0c49d;
     border: #a0c49d;
@@ -173,7 +173,7 @@ text-align: center;
     position: absolute;
     align-content: center;
     max-width: 400px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .imgbroodjeP1{
@@ -400,4 +400,8 @@ text-align: center;
   margin-left: 15px;
   justify-content: space-between;
 
+}
+
+.delete{
+  margin: 0;
 }

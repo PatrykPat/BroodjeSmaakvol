@@ -20,9 +20,26 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect(route('login'));
 });
+// Route::get('/menu', [MenuController::class, 'index']);
+// Route::get('/winkelwagen/{cart}', [CartController::class, 'showMenuItems'])->name('cart');
+// Route::post('/cart/delete/{productId}', [CartController::class, 'deleteFromCart'])->name('cart.delete');
+// Route::post('/cart/add/{productId}', [CartController::class, 'addToCart'])->name('cart.add');
+// Route::get('/meldingen', function () {
+//     return view('melding');
+// });
+// Route::get('/coupon', function () {
+//     return view('coupons');
+// });
 Route::get('/menu', [MenuController::class, 'index']);
-Route::get('/winkelwagen', [CartController::class, 'showMenuItems'])->name('cart');
-Route::get('/meldingen', function () {
+    Route::get('/winkelwagen', function () {
+        $user_id = Auth::id(); // Assuming you're using Laravel's authentication system
+        return redirect('/winkelwagen/' . $user_id);
+    });
+    Route::get('/winkelwagen/{user_id}', [CartController::class, 'showPopulair'])->name('showPopulair');
+    Route::get('/winkelwagen/{user_id}', [CartController::class, 'showMenuItems'])->name('cart');
+    Route::post('/add-to-cart/{user_id}/{productId}', [CartController::class, 'addToCart'])->name('addToCart');
+    Route::delete('/delete-from-cart/{user_id}/{productId}', [CartController::class, 'deleteFromCart'])->name('deleteFromCart');
+    Route::get('/meldingen', function () {
     return view('melding');
 });
 Route::get('/coupon', function () {

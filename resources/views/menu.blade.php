@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="css\styling.css">
+    <link rel="stylesheet" href="../css\styling.css">
 </head>
 
 <body>
@@ -38,9 +38,11 @@
                 <p class="beschrijving">{{$product->beschrijving}}</p>
                 <img src="images/vegan.svg" class="@if ($product->vegan) veganon @else veganoff @endif">
             </div>
-        
             <div class="buttonplaceP">
-                <button class="@if ($count == 0) winkelwagenknopG @else winkelwagenknop @endif"><img class="winkelwagenimg" src="images/winkelwagen.svg"></button>
+            <form method="POST" action="{{ route('addToCart', ['user_id' => Auth::id(), 'productId' => $product->id]) }}">
+            @csrf
+                <button type="submit" class="@if ($count == 0) winkelwagenknopG @else winkelwagenknop @endif"><img class="winkelwagenimg" src="images/winkelwagen.svg"></button> 
+            </form>
                 <p class="prijs">€{{$product->prijs}}</p>
             </div>
         </div>
@@ -68,12 +70,14 @@
             <p class="beschrijving">{{$product->beschrijving}}</p>
             <img src="images/vegan.svg" class="@if ($product->vegan) veganon @else veganoff @endif">
         </div>
-        
+
         <div class="buttonplace">
-            <button class="winkelwagenknop"><img class="winkelwagenimg" src="images/winkelwagen.svg"></button>
-            <p class="prijs">€{{$product->prijs}}</p>
-        </div>
-        <!-- INSERT INTO product_cart (product_id, cart_id) VALUES({{$product->id}}, 1); -->
+        <form method="POST" action="{{ route('addToCart', ['user_id' => Auth::id(), 'productId' => $product->id]) }}">
+            @csrf
+                <button type="submit" class="winkelwagenknop"><img class="winkelwagenimg" src="images/winkelwagen.svg"></button> 
+            </form>
+        <p class="prijs">€{{$product->prijs}}</p>
+        </div>        
     <div class="line2"></div>
     @endforeach
 </div>

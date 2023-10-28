@@ -9,11 +9,12 @@ use App\Models\Cart;
 class MenuItem extends Model
 {
     protected $table = 'producten';
-    protected $fillable = ['naam','id', 'beschrijving', 'prijs', 'vegan', 'uitverkocht', 'afbeeldingnaam'];
+    protected $fillable = ['id','naam', 'beschrijving', 'prijs', 'vegan', 'uitverkocht', 'afbeeldingnaam'];
 
     public function carts()
     {
-        return $this->belongsToMany(Cart::class, 'product_cart');
+        return $this->belongsToMany(Cart::class, 'product_cart','product_id','cart_id','naam' );
     }
+    
 }
 

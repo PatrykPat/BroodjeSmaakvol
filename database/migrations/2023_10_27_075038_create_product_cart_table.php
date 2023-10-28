@@ -15,13 +15,13 @@ return new class extends Migration
     {
         // Schema::create('product_cart', function (Blueprint $table) {
         //     $table->id();
-        //     $table->unsignedBiginteger('product_id')->unsigned();
-        //     $table->unsignedBiginteger('cart_id')->unsigned();
-
-        //     $table->foreign('product_id')->references('id')->on('producten')->onDelete('cascade');
-        //     $table->foreign('cart_id')->references('id')->on('cart')->onDelete('cascade');
-
+        //     $table->unsignedBigInteger('product_id'); // Change this line
+        //     $table->unsignedBigInteger('cart_id');
+        //     $table->integer('quantity')->default(1);
         //     $table->timestamps();
+    
+        //     $table->foreign('product_id')->references('id')->on('producten')->onDelete('cascade'); // Change this line
+        //     $table->foreign('cart_id')->references('id')->on('orders')->onDelete('cascade');
         // });
     }
 
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders_cart');
+        Schema::dropIfExists('product_cart');
     }
 };
