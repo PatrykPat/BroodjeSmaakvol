@@ -163,7 +163,7 @@ text-align: center;
 }
 .popI2{
   right: 3%;
-    top: 20%;
+    top: 28%;
     padding: 5px;
     background-color: #a0c49d;
     border: #a0c49d;
@@ -358,6 +358,13 @@ text-align: center;
   height: 60px;
   margin-top: 20px;
 }
+
+.buttonplace2{
+  width: 20%;
+  height: 60px;
+  margin-top: 20px;
+}
+
 .prijs{
   float: right;
   margin-top: 20px;

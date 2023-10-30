@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CouponController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,20 +23,24 @@ Route::get('/', function () {
     return redirect(route('login'));
 });
 Route::get('/menu', [MenuController::class, 'index']);
+
 Route::get('/winkelwagen', [CartController::class, 'showMenuItems'])->name('cart');
+
 Route::get('/meldingen', function () {
     return view('melding');
 });
-Route::get('/coupon', function () {
-    return view('coupons');
-});
+
+Route::post('/move-data', 'App\Http\Controllers\OrderController@moveData')->name('move.data');
+
+
+Route::get('/coupon', [CouponController::class, 'index']);
 
 Route::get('/winkelwagen', function () {
     return view('winkelwagen');
 });
 
-Route::get('/profiel', function () {
-    return view('profiel');
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });
 
 Route::get('/dashboard', function () {

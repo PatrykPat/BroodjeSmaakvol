@@ -1,8 +1,4 @@
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-    }
 
     .navbar {
         position: relative;
@@ -45,7 +41,7 @@
     <div class="burger-menu">
         <img src="images/Hamburger_icon.png" alt="Burger Menu">
         <div class="profile-link">
-            <a href="/profiel" class="icon-link">Profiel</a>
+            <a href="/dashboard" class="icon-link">Profiel</a>
         </div>
     </div>
 </div>

@@ -11,14 +11,10 @@
 <div class="topImg"><img src="images/wavesgroenboven.svg" class="waveMaxTop"></div>
 <div class="botImg"><img src="images/wavesgroenonder.svg" class="waveMaxBot"></div>
   
-=======
-<div class="topImg"><img src="images/wavesgroenboven.svg" class="waveMaxTop"></div>
-<div class="botImg"><img src="images/wavesgroenonder.svg" class="waveMaxBot"></div>
  
 @component('components.burger')
 @endcomponent
 
->>>>>>> Stashed changes
   <h1 class="Pagetitle">Menu</h1>
   
 
@@ -85,6 +81,8 @@
     <div class="line2"></div>
     @endforeach
 </div>
+<div class="line2"></div>
+<div class="line2"></div>
 
 @component('components.footer')
 @endcomponent
