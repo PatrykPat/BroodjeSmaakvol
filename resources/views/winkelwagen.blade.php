@@ -9,6 +9,11 @@
 <body>
     <p>Hier komt de winkelwagen</p>
 
+    <form action="{{ route('move.data') }}" method="POST">
+    @csrf
+    <button type="submit">Move Data</button>
+</form>
+
 
 @component('components.footer')
 @endcomponent
