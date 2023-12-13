@@ -164,7 +164,6 @@ text-align: center;
 .popI2{
   right: 3%;
     margin-top: 15%;
-    /* top: 28%;
     padding: 5px;
     background-color: #a0c49d;
     border: #a0c49d;
@@ -174,7 +173,7 @@ text-align: center;
     position: absolute;
     align-content: center;
     max-width: 400px;
-    z-index: 1; */
+    z-index: 1;
 }
 
 .imgbroodjeP1{
@@ -195,7 +194,7 @@ text-align: center;
 .line2 {
   width: 100%; /* Set the line width to 90% of the page width */
   height: 1px; /* Set the line thickness to 5px */
-  background-color: gray; /* Set the line color (black in this example) */
+  background-color: #808080; /* Set the line color (black in this example) */
   margin: 10px auto;
 }
 

@@ -34,13 +34,12 @@ Route::get('/', function () {
 // });
 Route::get('/menu', [MenuController::class, 'index']);
     Route::get('/winkelwagen', function () {
-        $user_id = Auth::id(); // Assuming you're using Laravel's authentication system
-        return redirect('/winkelwagen/' . $user_id);
+        $cart_id = Auth::id();
+        return redirect('/winkelwagen/' . $cart_id);
     });
-    Route::get('/winkelwagen/{user_id}', [CartController::class, 'showPopulair'])->name('showPopulair');
-    Route::get('/winkelwagen/{user_id}', [CartController::class, 'showMenuItems'])->name('cart');
-    Route::post('/add-to-cart/{user_id}/{productId}', [CartController::class, 'addToCart'])->name('addToCart');
-    Route::delete('/delete-from-cart/{user_id}/{productId}', [CartController::class, 'deleteFromCart'])->name('deleteFromCart');
+    Route::get('/winkelwagen/{cart_id}', [CartController::class, 'showMenuItems'])->name('cart');
+    Route::post('/add-to-cart/{cart_id}/{productId}', [CartController::class, 'addToCart'])->name('addToCart');
+    Route::delete('/delete-from-cart/{cart_id}/{productId}', [CartController::class, 'deleteFromCart'])->name('deleteFromCart');
     Route::get('/meldingen', function () {
     return view('melding');
 });
@@ -49,10 +48,6 @@ Route::post('/move-data', 'App\Http\Controllers\OrderController@moveData')->name
 
 
 Route::get('/coupon', [CouponController::class, 'index']);
-
-Route::get('/winkelwagen', function () {
-    return view('winkelwagen');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

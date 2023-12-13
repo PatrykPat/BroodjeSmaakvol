@@ -10,11 +10,12 @@
 <body>
 <div class="topImg"><img src="../images/wavesgroenboven.svg" class="waveMaxTop"></div>
 <div class="botImg"><img src="../images/wavesgroenonder.svg" class="waveMaxBot"></div>
-  
+  @component('components.burger')
+@endcomponent
   <h1 class="Pagetitle">winkelwagen</h1>
   
+  
 
-<!-- <div class="filtermenu"><h3>hierkomt filter menu</h3></div> -->
 
 <div class="tussenkop">
     <div class="line left-line"></div>
@@ -35,7 +36,7 @@
     </div>
     
     <div class="buttonplace">
-    <form method="POST" action="{{ route('deleteFromCart', ['user_id' => Auth::id(), 'productId' => $product->id]) }}">
+    <form method="POST" action="{{ route('deleteFromCart', ['cart_id' => Auth::id(), 'productId' => $product->id]) }}">
     @csrf
     @method('DELETE')
         <button class="winkelwagenknop"><p class="delete">X</p></button>
@@ -43,6 +44,15 @@
         <p class="prijs">€{{$product->prijs}}</p>
     </div>
     <div class="line2"></div>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 @endforeach
 </div>
 <div class="tussenkop">
@@ -68,7 +78,7 @@
                 <img src="../images/vegan.svg" class="@if ($popProduct->vegan) veganon @else veganoff @endif">
             </div>
             <div class="buttonplaceP">
-            <form method="POST" action="{{ route('addToCart', ['user_id' => Auth::id(), 'productId' => $popProduct->id]) }}">
+            <form method="POST" action="{{ route('addToCart', ['cart_id' => Auth::id(), 'productId' => $popProduct->id]) }}">
             @csrf
                 <button type="submit" class="@if ($count == 0) winkelwagenknopG @else winkelwagenknop @endif"><img class="winkelwagenimg" src="../images/winkelwagen.svg"></button> 
             </form>

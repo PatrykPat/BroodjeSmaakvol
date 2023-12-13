@@ -39,7 +39,7 @@
 
 <div class="navbar">
     <div class="burger-menu">
-        <img src="images/Hamburger_icon.png" alt="Burger Menu">
+        <img src="../images/Hamburger_icon.png" alt="Burger Menu">
         <div class="profile-link">
             <a href="/dashboard" class="icon-link">Profiel</a>
         </div>

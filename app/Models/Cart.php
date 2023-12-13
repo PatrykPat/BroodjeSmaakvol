@@ -9,8 +9,8 @@ use App\Models\MenuItem;
 
 class Cart extends Model
 {
-protected $table = 'orders';
-protected $fillable = ['id', 'user_id'];    
+protected $table = 'product_cart';
+protected $fillable = ['id','product_id','cart_id'];    
 
 public function user()
 {
@@ -18,12 +18,12 @@ public function user()
 }
 
 public function producten()
-{
-    // return $this->belongsToMany(MenuItem::class);
-    return $this->belongsToMany(MenuItem::class,'product_cart','cart_id','product_id');
-}
+    {
+        return $this->belongsToMany(MenuItem::class, 'product_cart', 'cart_id', 'product_id')
+            ->withPivot('quantity');
+    }
 public function productInfo()
 {
-    return MenuItem::where('id', $this->product_id)->value('naam');
+    return MenuItem::where('cart_id', $this->product_id)->value('naam');
     
 }};

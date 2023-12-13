@@ -43,7 +43,7 @@
                 <img src="images/vegan.svg" class="@if ($product->vegan) veganon @else veganoff @endif">
             </div>
             <div class="buttonplaceP">
-            <form method="POST" action="{{ route('addToCart', ['user_id' => Auth::id(), 'productId' => $product->id]) }}">
+            <form method="POST" action="{{ route('addToCart', ['cart_id' => Auth::id(), 'productId' => $product->id]) }}">
             @csrf
                 <button type="submit" class="@if ($count == 0) winkelwagenknopG @else winkelwagenknop @endif"><img class="winkelwagenimg" src="images/winkelwagen.svg"></button> 
             </form>
@@ -76,7 +76,7 @@
         </div>
 
         <div class="buttonplace">
-        <form method="POST" action="{{ route('addToCart', ['user_id' => Auth::id(), 'productId' => $product->id]) }}">
+        <form method="POST" action="{{ route('addToCart', ['cart_id' => Auth::id(), 'productId' => $product->id]) }}">
             @csrf
                 <button type="submit" class="winkelwagenknop"><img class="winkelwagenimg" src="images/winkelwagen.svg"></button> 
             </form>

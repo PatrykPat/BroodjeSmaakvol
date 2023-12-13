@@ -11,9 +11,9 @@ class MenuItem extends Model
     protected $table = 'producten';
     protected $fillable = ['id','naam', 'beschrijving', 'prijs', 'vegan', 'uitverkocht', 'afbeeldingnaam'];
 
-    public function carts()
+    public function cart()
     {
-        return $this->belongsToMany(Cart::class, 'product_cart','product_id','cart_id','naam' );
+        return $this->belongsToMany(Cart::class, 'product_cart','cart_id','product_id','naam' );
     }
     
 }
