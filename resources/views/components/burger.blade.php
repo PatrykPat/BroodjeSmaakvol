@@ -14,6 +14,7 @@
 
     .profile-link {
         position: absolute;
+        z-index: 999;
         top: 100%;
         left: 0;
         background-color: #a0c49d;
@@ -23,7 +24,6 @@
         padding: 10px;
         display: none;
         margin-top: 40px;
-        z-index: 1;
     }
 
     .profile-link.active {
@@ -35,13 +35,23 @@
         text-decoration: none;
         color: #333;
     }
+    @media screen and (max-width: 600px){
+    .other{
+        display: none;
+    }
+    }
 </style>
 
 <div class="navbar">
     <div class="burger-menu">
         <img src="../images/Hamburger_icon.png" alt="Burger Menu">
         <div class="profile-link">
-            <a href="/dashboard" class="icon-link">Profiel</a>
+            <a href="/" class="icon-link">home</a></br>
+            <a href="/winkelwagen" class="icon-link">winkelwagen</a></br>
+            <a href="/coupons" class="icon-link">coupons</a></br>
+            <a href="/meldingen" class="icon-link">meldingen</a></br>
+            <a href="/dashboard" class="icon-link">Profiel</a></br>
+
         </div>
     </div>
 </div>

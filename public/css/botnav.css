@@ -9,6 +9,7 @@
    text-align: center;
    display: grid;
    grid-template-columns: auto auto auto auto;
+   display: none;
    height: 60px;}
 
 .bottomNav a {
@@ -32,4 +33,9 @@
 }
 .icons{
     width: 40px
+ }
+ @media screen and (max-width: 600px){
+   .bottomNav{
+      display: grid;
+   }
  }
