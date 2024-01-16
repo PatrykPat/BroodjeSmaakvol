@@ -1,3 +1,20 @@
+Dit project is gemaakt als school opdracht door 2 mediavormgevers en 2 software developers. De opdracht was om een bestel website te maken voor alle scholieren van het ROC Rivor.
+
+Installatie:
+Clone de repository.
+Open de Repository in een integrated development environments (IDE). (bijvoorbeeld visual studio code of IntelliJ)
+Importeer broodjesmaakvol.sql in PHPmyadmin.
+Ga in de projectmap naar de terminal en type in de terminal: php artisan serve
+Gebruik vervolgens de link om op de website te komen.
+daar kun je registreren en inloggen om vervolgens alle stappen te doornemen tot het bestellen. het bestellen van de producten is nog niet geimplementeerd.
+
+!Dit project is nog in development!
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
